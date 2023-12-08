@@ -1,0 +1,14 @@
+[Unit]
+Description=install tailscale and connect to server
+After=network.target
+
+[Service]
+ExecStart=/PATH/TO/YOUR/ts-startup.sh
+Restart=on-failure
+RestartSec=10
+User=root
+Group=root
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
