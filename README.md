@@ -1,5 +1,5 @@
 # deployable-tailscale
-For dynamically deploying VMs that will automatically connect to your tailnet, follow the steps below:
+For deploying VMs that will automatically connect to your tailnet, follow the steps below:
 - Ensure the golden image OVA does **not** currently have Tailscale installed. If Tailscale is installed on a machine then the machine is cloned, you will get a `duplicate node key` error and will be required to reinstall Tailscale on each machine that has the duplicate key.
 - Create an auth-key that has `reusable` and `ephemeral` enabled. This will ensure the machines can all authenticate to the Tailnet using one authenticaton key, and the machines will automatically be removed from the Tailnet after being disconnected for a period of time.
 
